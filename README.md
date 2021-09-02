@@ -15,7 +15,7 @@ The output is analysed as follow:
 <br/>
 * NO MX Record for the domain : In this case the domain is not used for email purposes. For such domains the ideal value of SPF and DMARC for spoofing prevention should be :
    * "v=spfv1 -all" : This ensures that no server can send email for the domain.
-   * "v=DMARC1; p=reject; rua=mailto:admin@domain.tld" : Mail is rejected on recieving end and report is generated and sent to email addreess specified.
+   * "v=DMARC1; p=reject; rua=mailto:admin@domain.tld" : Mail is rejected on receiving end and report is generated and sent to email addreess specified.
    * DKIM for such domain is not required as it won't be used in communication
 
 * MX Record is valid: In this case check for SPF and DMARC values for predicting if the mail can be spoofed.
